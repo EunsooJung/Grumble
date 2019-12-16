@@ -28,6 +28,11 @@ $(document).ready(function() {
     liMaker(userInput);
   });
 
+  // Get user input list from localStorage
+  data.forEach(item => {
+    liMaker(item);
+  });
+
   // Clear Search list
   $('.btn-clear').on('click', function() {
     $('.createdCity').remove();
