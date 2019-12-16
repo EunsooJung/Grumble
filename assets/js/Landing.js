@@ -5,6 +5,20 @@ $(document).ready(function() {
 
   var userInput;
 
+  function searchCity(event) {
+    event.preventDefault();
+
+    if ($(this).attr('id') === 'searchedList') {
+      var x = event.target;
+      userInput = $(x).text();
+      console.log(userInput);
+    } else {
+      userInput = $(this)
+        .prev()
+        .val();
+    }
+  }
+
   // Create Search List ul
   var ul = $('#searchedList');
 
