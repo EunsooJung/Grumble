@@ -1,0 +1,15 @@
+#container {
+    background-color: black;
+}
+
+#city-search {
+    float: left;
+}
+
+#center-image {
+    float: left;
+}
+
+#saved-choices {
+    float:left;
+}
