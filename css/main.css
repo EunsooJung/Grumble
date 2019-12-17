@@ -1,0 +1,18 @@
+carousel .carousel-item > img {
+  height: 80%;
+  width: 80%;
+}
+.next,
+.prev {
+  position: absolute;
+  top: 45%;
+  color: white;
+  cursor: pointer;
+}
+.prev {
+  left: 0px;
+}
+
+.next {
+  right: 0px;
+}
