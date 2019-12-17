@@ -7,10 +7,113 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <title>Document</title>
+
+  <link href="assets/css/style.css" type="stylesheet">
+  <title>Grumble</title>
 </head>
 
 <body>
+<div id="container" class="container amber lighten-3"><!--main container-->
+<div class="center-align black"><img src="assets/images/Grumble_logo.jpg" width="300px"></div>
+
+  <div id="box" class="row"><!--App container-->
+      <div id="city-search" class="col s12 m6 l3 xl3"><!--city seach left div-->
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn orange darken-4">
+              <span>Search</span>
+              <input type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+        </form>
+        <table class="highlight">
+          <thead>
+            <tr>
+                <th>Previously Searched City</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <td>San Ramon</td>
+            </tr>
+            <tr>
+              <td>San Jose</td>
+            </tr>
+            <tr>
+              <td>San Leandro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+    <div id="center-image" class="col s12 m6 l6 xl6"><!-- center image div --> 
+            <div class="row">
+        <div class="">
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/images/girl_with_fork.jpg">
+              <!-- <span class="card-title">Card Title</span> -->
+              <a class="btn-floating btn-large left halfway-fab waves-effect waves-light orange darken-4"><i class="material-icons left"><img src="assets/images/thumbs_down.png" class="center-align"></i></a>
+              <a class="btn-floating btn-large halfway-fab waves-effect waves-light orange darken-4"><i class="material-icons"><img src="assets/images/thumbs_up.png" class="center-align"></img></a>
+            </div>
+            <div class="card-content center-align">
+              <p>Don't know what to eat? Let us chose for you. <br>Just type in the location in the top left, then click on the search button. <br>Click thumbs up or down on the food you like. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- center image div -->
+
+
+
+      <div id="saved-choices" class=""><!-- saved searches right div -->
+        <ul class="collection col s12 m12 l3 xl3">
+          <img src="assets/images/map.jpg" class="responsive-img">
+          <li class="collection-item">
+            <h6>Favorites</h6></li>
+            <li class="collection-item avatar">
+            <img src="assets/images/1noodles.jpg" alt="" class="circle">
+            <span class="title">Restaurant</span>
+            <p>Address <br>
+               phone number
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">Rating</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="assets/images/2dumplings.jpg" alt="" class="circle">
+            <span class="title">Restaurant</span>
+            <p>Address<br>
+               phone number
+            </p>
+            <a href="#!" class="secondary-content"><i class="">Rating</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="assets/images/3pizza.jpg" alt="" class="circle">
+            <span class="title">Title</span>
+            <p>First Line <br>
+               Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">Rating</i></a>
+          </li>
+          <li class="collection-item avatar">
+            <img src="assets/images/4hamburger.jpg" alt="" class="circle">
+            <span class="title">Title</span>
+            <p>First Line <br>
+               Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="material-icons">Rating</i></a>
+          </li>
+        </ul>
+      </div>
+  </div><!--App container-->
+
+
+</div><!--main container-->
 
 
 
