@@ -1,5 +1,9 @@
 $(document).ready(function () {
+    localStorage.clear();
     var cityArr = [];
+    var yelpApiArr;
+    var savedSearches = [];
+    var count = 0;
     showFavorites();
     $('.collapsible').collapsible();
     $('.sidenav').sidenav();
@@ -10,14 +14,28 @@ $(document).ready(function () {
         //getData(cityArr[0]);
     }
 
-    $("#searchForm").on("submit", function(e){
+    $("#searchForm").on("submit", function (e) {
         e.preventDefault();
         var cityName = $("#searchInput").val().trim();
         cityArr.push(cityName);
         localStorage.setItem("listOfCities", JSON.stringify(cityArr));
         showCityHistory();
         getYelpPics(cityName);
+        $("#searchInput").val("");
+    });
 
+    $(".card a").on("click", function(e){
+        
+        if($(this).attr("id") === "rightApproveBtn"){
+            savedSearches.push(yelpApiArr[count]);
+            localStorage.setItem("list", JSON.stringify(savedSearches));
+            showFavorites();
+            $("#mainImageDiv").attr("src", yelpApiArr[count].image_url);
+            count++;
+        } else {
+            $("#mainImageDiv").attr("src", yelpApiArr[count].image_url);
+            count++;
+        }
     });
 
     function getYelpPics(city) {
@@ -27,7 +45,7 @@ $(document).ready(function () {
                 options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
             }
         });
-    
+
         $.ajax({
             url: "https://api.yelp.com/v3/businesses/search?location=" + city + "&term=food",
             method: "GET",
@@ -36,11 +54,13 @@ $(document).ready(function () {
             }
         }).then(function (response) {
             console.log(response)
-            console.log(response.businesses[0].name)
+            yelpApiArr = response.businesses;
+            console.log(yelpApiArr);
+            $("#mainImageDiv").attr("src", response.businesses[0].image_url);
         });
     };
 
-//-----------------------------------mock data
+    //-----------------------------------mock data
     // var listOfbusinesses = {
     //     "san francisco": [
     //         { "name": "Oji", "address": "1740 Buchanan St", "latitude": 37.786171, "longitude": -122.429681, "rating": 4, "phone": "(415) 529-1030", "img": "https://s3-media2.fl.yelpcdn.com/bphoto/lQKbAprZcyqGb4MNDM8qfg/o.jpg" },
@@ -60,25 +80,40 @@ $(document).ready(function () {
             listDiv.prepend("<a href='#!' class='collection-item'>" + cityArr[i]);
         }
     };
-    
+
     function showFavorites() {
         var ulCollectionsDiv = $("collection");
-        var temp = JSON.parse(localStorage.getItem("list"));
-        var list = temp["san francisco"];
+        var list = JSON.parse(localStorage.getItem("list"));
+        // var list = temp["san francisco"];
         // var list = temp[currentCity];
         // var list = localStorage.getItem(currentCity);
 
         console.log(list);
-        
-        for (var i = 0; i < list.length; i++) {
-            var newItem = "<li> <div class='collapsible-header'>\
-                <img class='imgSize' src='"+ list[i].img + "'>"+ list[i].name +"<br>"+ list[i].rating +"</div>\
-            <div class='collapsible-body'>\
-            </div>\
-          </li>";
-            $(".collapsible").append(newItem);
+        if(list !== null) {
+            $(".collapsible").empty();
+
+            for (var i = 0; i < list.length; i++) {
+                var newItem = "<li> <div class='collapsible-header'>\
+                    <img class='imgSize' src='"+ list[i].image_url + "'>" + list[i].name + "<br>" + list[i].rating + "</div>\
+                <div class='collapsible-body'>\
+                </div>\
+              </li>";
+                $(".collapsible").append(newItem);
+            }
         }
     };
+
+    //----------------- window resize functionality
+    // checkSize();
+    // $(window).resize(checkSize);
+
+    // function checkSize() {
+    //     if ($("#nav-mobile").css("display") == "none") {
+    //         // your code here
+    //         $('.sidenav').sidenav().close();
+
+    //     }
+    // }
 
 
 });

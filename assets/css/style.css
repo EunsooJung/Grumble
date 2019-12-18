@@ -26,12 +26,6 @@ header nav.top-nav {
     box-shadow: none;
     border-bottom: 1px solid rgba(0,0,0,0.14);
 }
-/* .sidenav {
-    z-index: 0 !important;
-} */
-main {
-    border: 1px solid black;
-}
 .imgSize{
     width: 75px;
     height: 75px;
@@ -39,4 +33,26 @@ main {
 }
 #favoritesWrapper .material-icons {
     font-family: none !important;
+}
+
+/* @media only screen and (max-width: 1190px) {
+    #nav-mobile {
+      display: none;
+    }
+  } */
+
+#leftDissmissBtn {
+    right: 0;
+    left: 30px;
+    bottom: 150px;
+    position: absolute;
+}
+#rightApproveBtn{
+    position: absolute;
+    right: 30px;
+    bottom: 150px;
+}
+#mainImageDiv {
+    width: 100%;
+    height: 100%;
 }
