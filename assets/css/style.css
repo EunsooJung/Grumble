@@ -1,9 +1,18 @@
-.imgSize{
-    width: 100%;
-    height: 100%;
+#nav-mobile {
+    padding: 10px !important;
+}
+#nav-mobile input{
+    width: 90%;
+}
+#nav-mobile i{
+    margin-top: 5px;
 }
 
-/* .imgDiv{
-    width: 100px !important;
-    height: 100px !important;
-} */
+.imgSize{
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+#favoritesWrapper .material-icons {
+    font-family: none !important;
+}

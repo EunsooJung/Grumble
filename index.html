@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script src="js/materialize.min.js"></script>
-  <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -15,19 +13,40 @@
 </head>
 
 <body>
+  <header>
+    <div class="container"><a href="#" data-target="nav-mobile"
+        class="top-nav sidenav-trigger full hide-on-large-only"><i class="material-icons">menu</i></a>
+    </div>
+    <ul id="nav-mobile" class="sidenav sidenav-fixed">
+      <li class="search">
+        <div class="search-wrapper">
+          <form action="#" id="searchForm">
+            <input id="searchInput" placeholder="Search City">
+            <i class="material-icons">search</i>
+          </form>
+        </div>
+      </li>
+      <li>
+        <div class="collection" id="searchHistory">
+          <a href="#!" class="collection-item">Alan</a>
+          <a href="#!" class="collection-item">Alan</a>
+        </div>
+      </li>
+    </ul>
+  </header>
 
-
-  <div id="favoritesWrapper">
+  <!-- <div id="favoritesWrapper" class="container">
     <ul class="collapsible popout">
     </ul>
-  </div>
+  </div> -->
+  
+
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <script src="./js/Main.js"></script>
-  <!-- Compiled and minified JavaScript -->
-
-
   <script src="assets/js/favorites.js"></script>
-  <script type="text/javascript" src="./js/materialize.min.js"></script>
 
 </body>
 
