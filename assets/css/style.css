@@ -1,11 +1,30 @@
+body {
+    background-color: #e0e0e0;
+}
 #nav-mobile {
     padding: 10px !important;
+    box-shadow: none !important;
+    border-right: 1px solid rgba(0,0,0,0.14);
+    background-color: #616161;
 }
 #nav-mobile input{
     width: 90%;
 }
 #nav-mobile i{
     margin-top: 5px;
+}
+#menuItem a i{
+    color: #616161 !important;
+}
+header span{
+    color: black;
+    margin-left: 100px;
+
+}
+header nav.top-nav {
+    background-color: white !important;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,0.14);
 }
 
 .imgSize{
