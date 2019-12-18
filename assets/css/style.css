@@ -1,0 +1,69 @@
+body {
+    background-color: #e0e0e0;
+}
+#nav-mobile {
+    padding: 10px !important;
+    box-shadow: none !important;
+    border-right: 1px solid rgba(0,0,0,0.14);
+    background-color: #616161;
+}
+#nav-mobile input{
+    width: 90%;
+}
+#nav-mobile i{
+    margin-top: 5px;
+}
+#menuItem a i{
+    color: #616161 !important;
+}
+header span{
+    color: black;
+    margin-left: 100px;
+
+}
+header nav.top-nav {
+    background-color: white !important;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,0.14);
+}
+.imgSize{
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+#favoritesWrapper .material-icons {
+    font-family: none !important;
+}
+
+/* @media only screen and (max-width: 1190px) {
+    #nav-mobile {
+      display: none;
+    } 
+    #searchWrapper {
+        
+        display: none;
+    }
+  } */
+
+#leftDissmissBtn {
+    right: 0;
+    left: 30px;
+    top: 225px;
+    position: absolute;
+}
+#rightApproveBtn{
+    position: absolute;
+    right: 30px;
+    top: 225px;
+}
+#mainImageDiv {
+    width: 100%;
+    height: 100%;
+}
+
+.collection a.collection-item {
+    color: orange;
+}
+/* #searchInput:focus {
+    outline-color: orange;
+} */
