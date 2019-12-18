@@ -24,7 +24,7 @@
             </div>
           </div>
           <div class="col s10">
-            <span><b>Grumble</b></span>
+            <span><b id="headerHtml">Grumble</b></span>
           </div>
         </div>
       </div>
@@ -32,8 +32,11 @@
   </header>
 
   <div class="row" id="mainContentWrapper">
-    <div class="col m1 l3">
+    <div class="col m1 l3" id="searchWrapper">
       <ul id="nav-mobile" class="sidenav sidenav-fixed">
+        <li>
+          <img width="280px" height="130px" src="assets/images/Grumble_logo.jpg">
+        </li>
         <li class="search">
           <div class="search-wrapper">
             <form action="#" id="searchForm">
@@ -72,16 +75,18 @@
       </div>
     </aside>
   </div>
+  <script type="text/javascript" src="js/jquery.min.js"></script>
 
   <script>
-//       document.addEventListener('DOMContentLoaded', function() {
-//  var elems = document.querySelectorAll('.sidenav');
-//  var instances = M.Sidenav.init(elems, {edge:'right'});
-// });
-// </script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   var elems = document.querySelectorAll('.sidenav');
+    //   var instances = M.Sidenav.init(elems);
+    // });
 
 
-  <script type="text/javascript" src="js/jquery.min.js"></script>
+  </script>
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
   <script src="./js/Main.js"></script>

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    localStorage.clear();
+    // localStorage.clear();
     var cityArr = [];
     var yelpApiArr;
     var savedSearches = [];
@@ -22,6 +22,13 @@ $(document).ready(function () {
         showCityHistory();
         getYelpPics(cityName);
         $("#searchInput").val("");
+        $("#headerHtml").html(cityName);
+    });
+    
+    $("#searchHistory a").on("click", function(e){
+        var historyButtonLink = $(this).html();
+        getYelpPics(historyButtonLink);
+        $("#headerHtml").html(historyButtonLink);
     });
 
     $(".card a").on("click", function(e){
@@ -81,9 +88,6 @@ $(document).ready(function () {
     function showFavorites() {
         var ulCollectionsDiv = $("collection");
         var list = JSON.parse(localStorage.getItem("list"));
-        // var list = temp["san francisco"];
-        // var list = temp[currentCity];
-        // var list = localStorage.getItem(currentCity);
 
         console.log(list);
         if(list !== null) {
@@ -101,16 +105,19 @@ $(document).ready(function () {
     };
 
     //----------------- window resize functionality
-    // checkSize();
-    // $(window).resize(checkSize);
-
-    // function checkSize() {
-    //     if ($("#nav-mobile").css("display") == "none") {
-    //         // your code here
-    //         $('.sidenav').sidenav().close();
-
+    // $(window).resize(function(){
+    //     var width = $(window).width();
+    //     var instance = M.Sidenav.getInstance(".sidenav");
+        
+    //     if (width < 1190){
+    //         $('.sidenav').sidenav("close");
     //     }
-    // }
+
+    // });
+
+
+
+
 
 
 });
