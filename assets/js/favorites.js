@@ -30,12 +30,9 @@ $(document).ready(function () {
             savedSearches.push(yelpApiArr[count]);
             localStorage.setItem("list", JSON.stringify(savedSearches));
             showFavorites();
-            $("#mainImageDiv").attr("src", yelpApiArr[count].image_url);
-            count++;
-        } else {
-            $("#mainImageDiv").attr("src", yelpApiArr[count].image_url);
-            count++;
         }
+        count++;
+        $("#mainImageDiv").attr("src", yelpApiArr[count].image_url);
     });
 
     function getYelpPics(city) {
