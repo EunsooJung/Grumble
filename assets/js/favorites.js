@@ -91,9 +91,9 @@ $(document).ready(function () {
 
             for (var i = 0; i < list.length; i++) {
                 var newItem = "<li> <div class='collapsible-header'>\
-                    <img class='imgSize' src='"+ list[i].image_url + "'>" + list[i].name + "<br>" + list[i].rating + "</div>\
-                <div class='collapsible-body'>\
-                </div>\
+                    <img class='imgSize' src='"+ list[i].image_url + "'>" + list[i].name + "<br>Ratings: " + list[i].rating + "<br>"+ list[i].categories[0].title +"</div>\
+                <div class='collapsible-body'><iframe width='100%' height='100%' frameborder='0' style='border:0' src='https://www.google.com/maps/embed/v1/place?key=AIzaSyC5H1sUje2YHZ3C0PUtQJF15wzYjnuGpXI&zoom=15&q=" + list[i].location.display_address[0] + "," + list[i].location.display_address[1] + "," + list[i].location.display_address[2]  + "'></iframe>\
+                <span>" + list[i].display_phone + "</span><br><span>"+ list[i].location.display_address[0] + "," + list[i].location.display_address[1] + "," + list[i].location.display_address[2]   +"</span></div>\
               </li>";
                 $(".collapsible").append(newItem);
             }
