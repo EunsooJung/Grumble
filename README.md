@@ -6,7 +6,7 @@ Using both yelp and google maps api’s, once you decide what looks good you can
 
 - Project One: API Repository for The Three Musketeers team.
 
-- Built a Developer Profile Generator using the GitHub API
+- Built a Grumble Web App to search user's favorite foods restaurant using the GitHub and google map API
 
 ## Getting Started
 
