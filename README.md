@@ -19,7 +19,7 @@ index.html
 
 ## Preview
 
-[![: YELP API and Google Map API](https://github.com/EunsooJung/Developer-Profile-Generator/blob/master/assets/09-Dev-Profile-Gen-Preview.gif)](https://github.com/EunsooJung/Developer-Profile-Generator/blob/master/assets/09-Dev-Profile-Gen-Preview.gif)
+[![: YELP API and Google Map API](https://github.com/EunsooJung/Grumble/blob/master/assets/images/Grumble.gif)](https://github.com/EunsooJung/Grumble/blob/master/assets/images/Grumble.gif)
 
 ## Usage
 
